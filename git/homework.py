@@ -47,13 +47,9 @@ def multiple_ints(first_value: int, second_value: int) -> int:
         Product of elements
     """
     try:
-        int(first_value)
-        int(second_value)
-        return first_value*second_value
-    except:
+        return int(first_value)*int(second_value)
+    except (TypeError, ValueError):
         raise ValueError
-
-
 
 
 def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
@@ -80,13 +76,10 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
         >>> "Not valid input data"
     """
     try:
-        int(first_value)
-        int(second_value)
         return int(first_value)*int(second_value)
-    except:
+    except (TypeError, ValueError):
         raise ValueError('Not valid input data')
     
-
 
 def is_word_in_text(word: str, text: str) -> bool:
     """
@@ -101,10 +94,7 @@ def is_word_in_text(word: str, text: str) -> bool:
         is_word_in_text("Glad", "Nice to meet you ")
         >>> False
     """
-    if word in text:
-        return True
-    else:
-        return False
+    return word in text
 
 
 def some_loop_exercise() -> list:
@@ -118,7 +108,6 @@ def some_loop_exercise() -> list:
         else:
             my_perfect_list.append(i)
     return my_perfect_list
-
 
 
 def remove_from_list_all_negative_numbers(data: List[int]) -> list:
@@ -135,7 +124,6 @@ def remove_from_list_all_negative_numbers(data: List[int]) -> list:
         if i < 0:
             new_list.remove(i)
     return new_list
-
 
 
 def alphabet() -> dict:
@@ -163,15 +151,10 @@ def simple_sort(data: List[int]) -> List[list]:
         >>> [1, 2, 2, 3, 6, 7, 9]
     Returns:
     """
-    new_list = []
-    while data:
-    	minimum = data[0]  # arbitrary number in list 
-    	for i in data: 
-            if i < minimum:
-                minimum = i
-    	new_list.append(minimum)
-    	data.remove(minimum)    
+    for i in range(len(data)):
+        for j in range(1, len(data) - i):
+            if data[j - 1] > data[j]:
+                data[j - 1], data[j] = data[j], data[j - 1]
+    return data
 
-    return new_list
 
-  
