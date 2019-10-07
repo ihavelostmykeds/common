@@ -2,6 +2,7 @@ import math
 
 
 class Rectangle:
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -56,4 +57,18 @@ class Rectangle:
         """
         diagonal = self.get_rectangle_diagonal()
         radius = diagonal / 2
+        return radius
+
+    def get_radius_of_inscribed_circle(self):
+        """
+        Get radius of inscribed circle in rectangle
+        due to the formula:      d
+                              -------
+                                2√2
+        where d is diagonal of the rectangle
+        :return:
+        """
+        if self.width != self.height:
+            raise ValueError("Can't inscribed circle in rectangle with such width and height")
+        radius = self.width / 2
         return radius
