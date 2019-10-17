@@ -7,12 +7,15 @@ from functions import *
 class Test(unittest.TestCase):
 
     def test_func1(self):
+        a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+        b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
         expected = [1, 2, 3, 5, 8, 13]
-        self.assertEqual(func1(), expected)
+        self.assertEqual(func1(a, b), expected)
 
     def test_func2(self):
+        given_string = 'I am a good developer. I am also a writer'
         excpected = 5
-        self.assertEqual(func2(), excpected)
+        self.assertEqual(func2(given_string), excpected)
 
     def test_func3(self):
         self.assertTrue(func3(27))
@@ -34,13 +37,13 @@ class Test(unittest.TestCase):
         self.assertFalse(b)
 
     def test_func7(self):
-        expected_result = 9
-        actual_result = func7([5, 3, 4, 3, 4, 5, 9])
+        expected_result = [4]
+        actual_result = func7([1, 3, 4, 3, 1, 3])
         self.assertEqual(actual_result, expected_result)
 
     def test_func8(self):
-        expected_result = 6
-        actual_result = func8([1, 2, 3, 4, 5, 7, 8])
+        expected_result = 7
+        actual_result = func8([1, 3, 5, 9])
         self.assertEqual(actual_result, expected_result)
 
     def test_func9(self):
@@ -54,8 +57,8 @@ class Test(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
     def test_func11(self):
-        expected_result = '1:3'
-        actual_result = func11(63)
+        expected_result = '1:52'
+        actual_result = func11(112)
         self.assertEqual(actual_result, expected_result)
 
     def test_func12_1(self):
@@ -68,13 +71,13 @@ class Test(unittest.TestCase):
         actual_result = func12('fun&!! time')
         self.assertEqual(actual_result, expected_result)
 
-    @patch("functions.func13", return_value='Michele is name My')
-    def test_func13(self, func13):
+    @patch('functions.input', return_value='My name is Michele')
+    def test_func13(self, mock):
         self.assertEqual(func13(), 'Michele is name My')
 
-    @patch("functions.func14", return_value='1, 1, 2, 3')
-    def test_func14(self, func14):
-        self.assertEqual(func14(), '1, 1, 2, 3')
+    @patch("functions.input", return_value=4)
+    def test_func14(self, mock):
+        self.assertEqual(func14(), [1, 1, 2, 3])
 
     def test_func15(self):
         a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
