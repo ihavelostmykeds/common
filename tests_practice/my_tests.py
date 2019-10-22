@@ -42,8 +42,8 @@ class Test(unittest.TestCase):
         self.assertEqual(actual_result, expected_result)
 
     def test_func8(self):
-        expected_result = 7
-        actual_result = func8([1, 3, 5, 9])
+        expected_result = 5
+        actual_result = func8([1, 2, 3, 4, 6, 7, 8])
         self.assertEqual(actual_result, expected_result)
 
     def test_func9(self):
