@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="shortcut icon" href="">
+</head>
+<style>
+    #images {
+        text-align: center;
+    }
+
+    *:focus {
+        outline: 0;
+    }
+ /*   body {
+
+    background-color: #b3d7ff;
+} */
+</style>
+<body>
+<!--Navbar-->
+
+
+
+<nav class="navbar navbar-expand-lg bg-info text-dark">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" >Flaskwtf</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <a class="nav-item active">
+        <a class="nav-link text-white" href="/">Home
+            <a class="nav-link text-white" href="/Alarm_clock">Alarm clock
+                <a class="nav-link text-white" href="/Battery_charger">Battery charger
+                    <a class="nav-link text-white" href="/Calculator">Calculator
+                        <a class="nav-link text-white" href="/Coffeemaker">Coffeemaker
+                            <a class="nav-link text-white" href="/Headphones">Headphones
+                                <a class="nav-link text-white" href="/iPod">iPod
+          <span class="sr-only">(current)</span>
+        </a>
+      </a>
+
+
+      <!-- Dropdown -->
+      </ul>
+
+    <!-- Links -->
+
+    <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+{% block device_page %}
+{% endblock %}
+{% block home_page %}
+{% endblock %}
+{% block author_content %}
+{% endblock %}
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Footer</h5>
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+      {% block author_link %}
+<a href="/author">Designed by</a>
+      {%endblock%}
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright
+
+  </div>
+  <!-- Copyright -->
+
+
+</footer>
+<!-- Footer -->
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block device_page %}
+<center>
+    <h1>{{list_of_device_dict[0]['title']}}</h1>
+    <img src="{{url_for('static', filename=image+'.png')}}" width="500px" height="500px">
+    <br>{{list_of_device_dict[0]['text']}}</br>
+    <br>number of words: {{list_of_device_dict[0]['text'].split()| length()}}</br>
+
+</center>
+{% endblock %}
