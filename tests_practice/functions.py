@@ -46,7 +46,6 @@ def func4(given_int):
         c = []
         for i in str(given_int):
             c.append(int(i))
-        # c = [int(i) for i in str(given_int)]
         given_int = sum(c)
     return given_int
 
@@ -189,12 +188,8 @@ def func15(my_list):
     a new list that has only the even elements of this
     list in it.
     """
-    # c = []
+
     return [i for i in my_list if i % 2 == 0]
-    # for i in my_list:
-    # if i % 2 == 0:
-    #  c.append(i)
-    # return c
 
 
 def func16(my_int):
