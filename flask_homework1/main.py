@@ -8,11 +8,6 @@ def get_home_page():
     return render_template("home.html")
 
 
-@app.route('/base')
-def get_base_page():
-    return render_template("base.html")
-
-
 @app.route('/vegetables')
 def get_vegetables_page():
     return render_template("vegetables.html", vegetables=['beans', 'carrot', 'beetroot', 'cucumber'])
