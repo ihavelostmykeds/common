@@ -43,12 +43,12 @@
     <ul class="navbar-nav mr-auto">
       <a class="nav-item active">
         <a class="nav-link text-white" href="/">Home
-            <a class="nav-link text-white" href="/Alarm_clock">Alarm clock
-                <a class="nav-link text-white" href="/Battery_charger">Battery charger
-                    <a class="nav-link text-white" href="/Calculator">Calculator
-                        <a class="nav-link text-white" href="/Coffeemaker">Coffeemaker
-                            <a class="nav-link text-white" href="/Headphones">Headphones
-                                <a class="nav-link text-white" href="/iPod">iPod
+            <a class="nav-link text-white" href="{{url_for('get_device_page', device='Alarm_clock')}}" > Alarm clock
+                <a class="nav-link text-white" href="{{url_for('get_device_page', device='Battery_charger')}}">Battery charger
+                    <a class="nav-link text-white" href="{{url_for('get_device_page', device='Calculator')}}">Calculator
+                        <a class="nav-link text-white" href="{{url_for('get_device_page', device='Coffeemaker')}}">Coffeemaker
+                            <a class="nav-link text-white" href="{{url_for('get_device_page', device='Headphones')}}">Headphones
+                                <a class="nav-link text-white" href="{{url_for('get_device_page', device='iPod')}}">iPod
           <span class="sr-only">(current)</span>
         </a>
       </a>
