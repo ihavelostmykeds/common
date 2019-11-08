@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main_info %}
+<ul>
+    {% for veg in vegetables %}
+        {% if veg == 'beetroot' %}
+            <li>{{ veg|upper }}</li>
+        {% else %}
+            <li>{{veg}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
